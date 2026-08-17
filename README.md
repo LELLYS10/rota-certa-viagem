@@ -6,7 +6,7 @@ Aplicativo estático e responsivo para montar propostas de viagem com passagem a
 
 Abra `index.html` em qualquer navegador. Preencha origem, destino, datas, passageiros, orçamento e prioridade; o cálculo é atualizado ao clicar em **Calcular proposta**.
 
-É possível montar o pacote completo ou desmarcar passagem/hotel. O total é recalculado e os botões levam aos fornecedores para concluir reserva e pagamento.
+É possível escolher voo de ida e volta ou somente ida, montar o pacote completo ou desmarcar passagem/hotel. O total é recalculado e os botões levam aos fornecedores para concluir reserva e pagamento.
 
 ## Importante
 
