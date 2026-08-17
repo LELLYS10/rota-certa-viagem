@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071b2f">
+  <title>Rota Certa — Passagens + Hotel</title>
+  <style>
+    :root{--ink:#081b2e;--blue:#0d6efd;--cyan:#22c7dd;--paper:#f5f7fa;--white:#fff;--muted:#657384;--line:#dce4eb;--green:#0e9f6e;--orange:#ff8a3d;--shadow:0 22px 55px rgba(3,25,45,.14)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(150deg,#061827 0,#0c3151 31rem,#eef3f7 31rem);color:var(--ink);font:15px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,select{font:inherit}button{cursor:pointer}.shell{width:min(1120px,calc(100% - 28px));margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0;color:#fff}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));box-shadow:0 10px 24px #001a}.status{font-size:12px;padding:7px 11px;border:1px solid #ffffff38;border-radius:99px;color:#dff9ff}.hero{color:#fff;padding:36px 0 62px}.eyebrow,.section-tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow{color:#75e6f4}.hero h1{max-width:720px;margin:10px 0 12px;font-size:clamp(34px,6vw,66px);line-height:1.02;letter-spacing:-.045em}.hero p{max-width:630px;margin:0;color:#c4d7e7;font-size:17px}.search-card{margin-top:30px;padding:18px;background:#fff;border-radius:22px;box-shadow:var(--shadow);color:var(--ink)}
+    .grid{display:grid;gap:13px}.search-grid{grid-template-columns:repeat(12,1fr)}.field{grid-column:span 3}.field.wide{grid-column:span 4}.field.small{grid-column:span 2}.field label{display:block;margin:0 0 6px;font-size:11px;font-weight:800;color:#607181;text-transform:uppercase;letter-spacing:.07em}.field input,.field select{width:100%;height:48px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:#f9fbfc;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #0d6efd16}.search-action{display:flex;align-items:flex-end;grid-column:span 2}.primary{width:100%;height:48px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--blue),#0b56c5);color:#fff;font-weight:800;box-shadow:0 9px 20px #0d6efd3a}.primary:hover{filter:brightness(1.06)}
+    main{padding:34px 0 70px}.notice{display:flex;gap:12px;padding:14px 16px;margin-bottom:20px;border:1px solid #b9d9e9;background:#e9f8ff;border-radius:14px;color:#24516a;font-size:13px}.notice strong{color:#0a3c58}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:30px 0 14px}.section-head h2{margin:3px 0 0;font-size:25px;letter-spacing:-.03em}.section-tag{color:var(--blue)}.section-head p{margin:0;color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{position:relative;background:var(--white);border:1px solid #e5ebf0;border-radius:20px;box-shadow:0 10px 30px rgba(4,27,46,.07);overflow:hidden}.card-body{padding:21px}.card-top{display:flex;justify-content:space-between;gap:15px;align-items:start}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:99px;background:#e9f2ff;color:#0752b5;font-size:11px;font-weight:800;padding:5px 9px}.pill.green{background:#e3f8ef;color:#087550}.price{text-align:right;font-size:24px;font-weight:900;letter-spacing:-.04em}.price small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:0}.route{display:flex;align-items:center;gap:14px;margin:23px 0}.airport strong{display:block;font-size:30px;line-height:1}.airport span{font-size:11px;color:var(--muted)}.route-line{display:flex;align-items:center;flex:1;color:var(--blue)}.route-line:before,.route-line:after{content:"";height:1px;background:#9fc6f8;flex:1}.route-line b{padding:0 8px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding-top:16px;border-top:1px dashed #ccd7df}.fact span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}.fact strong{font-size:13px}.saving{padding:12px 21px;background:#f5fbf8;color:#156948;font-size:12px;border-top:1px solid #d9f1e5}.hotel-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}.hotel-card{display:grid;grid-template-columns:190px 1fr}.hotel-visual{min-height:220px;padding:20px;background:linear-gradient(150deg,#063250,#10a3ba);color:#fff;display:flex;flex-direction:column;justify-content:space-between}.hotel-visual .stars{color:#ffe481;letter-spacing:3px}.hotel-visual b{font-size:54px;line-height:1}.hotel-details{padding:22px}.hotel-details h3{font-size:23px;margin:4px 0}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.meta span{background:#f0f4f7;border-radius:8px;padding:6px 9px;font-size:12px;color:#4f6070}.checklist{padding:0;margin:16px 0 0;list-style:none}.checklist li{padding:6px 0}.checklist li:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}.weather{padding:22px;background:linear-gradient(155deg,#fff8e8,#fff);}.weather-icon{font-size:48px}.temps{font-size:37px;font-weight:900;letter-spacing:-.05em}.temps small{font-size:15px;color:var(--muted);font-weight:500}.weather p{color:#536170}.breakdown{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}.rows{padding:8px 22px 18px}.cost-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid #edf1f4}.cost-row:last-child{border:0}.cost-row span{color:#5f6e7c}.cost-row strong{text-align:right}.total-card{background:linear-gradient(145deg,#071b2f,#0a3a60);color:#fff;border:0}.total-card .card-body{padding:25px}.total-label{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#78dff0}.grand-total{font-size:clamp(38px,6vw,61px);font-weight:900;line-height:1.05;letter-spacing:-.055em;margin:6px 0}.per-person{color:#bed2e2}.budget-status{margin-top:22px;padding:12px;border:1px solid #ffffff26;border-radius:12px;background:#ffffff0b}.bar{height:7px;margin-top:9px;background:#ffffff24;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#21d39b,#73e6f2);transition:.4s}.total-options{margin-top:14px;display:grid;gap:8px}.total-options label{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#d7e6f1}.actions{display:flex;gap:10px;margin-top:18px}.link-btn{flex:1;padding:12px;border-radius:11px;text-align:center;text-decoration:none;color:#fff;border:1px solid #ffffff36;font-weight:700}.link-btn.accent{background:var(--orange);border-color:var(--orange)}.promo{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:16px;padding:15px 18px;background:#fff;border:1px dashed #9bb5c7;border-radius:15px}.promo b{display:block}.promo span{color:var(--muted);font-size:12px}.promo-time{text-align:right}.footer{padding:25px 0;color:#62717e;font-size:12px;text-align:center}.editable{border-bottom:1px dashed #7b8994}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:800px){.field,.field.wide{grid-column:span 6}.field.small,.search-action{grid-column:span 3}.hotel-layout,.breakdown{grid-template-columns:1fr}.hero{padding-top:20px}.hero h1{font-size:44px}}
+    @media(max-width:580px){body{background:linear-gradient(150deg,#061827 0,#0c3151 39rem,#eef3f7 39rem)}.shell{width:min(100% - 20px,1120px)}.topbar{padding:15px 0}.status{display:none}.hero{padding-bottom:38px}.hero h1{font-size:37px}.hero p{font-size:15px}.search-card{padding:14px}.field,.field.wide,.field.small{grid-column:span 6}.search-action{grid-column:span 12}.cards{grid-template-columns:1fr}.hotel-card{grid-template-columns:1fr}.hotel-visual{min-height:145px}.facts{grid-template-columns:1fr 1fr}.promo{align-items:flex-start;flex-direction:column}.promo-time{text-align:left}.actions{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar"><div class="brand"><span class="brand-mark">✈</span> Rota Certa</div><span class="status">● Simulador de viagem</span></div>
+    <div class="shell hero">
+      <div class="eyebrow">Passagem aérea + hospedagem</div>
+      <h1>Sua viagem inteira, numa conta só.</h1>
+      <p>Compare rotas, taxas, bagagem, assento e hotel com transparência — antes de decidir.</p>
+      <form class="search-card" id="tripForm">
+        <div class="grid search-grid">
+          <div class="field wide"><label for="origin">Origem</label><input id="origin" value="Araguaína (AUX)" required></div>
+          <div class="field wide"><label for="destination">Destino</label><input id="destination" value="Florianópolis (FLN)" required></div>
+          <div class="field small"><label for="departure">Ida</label><input id="departure" type="date" value="2026-12-03" required></div>
+          <div class="field small"><label for="returnDate">Volta</label><input id="returnDate" type="date" value="2026-12-10" required></div>
+          <div class="field small"><label for="adults">Adultos</label><input id="adults" type="number" min="1" value="2"></div>
+          <div class="field small"><label for="children">Crianças</label><input id="children" type="number" min="0" value="0"></div>
+          <div class="field small"><label for="infants">Bebês</label><input id="infants" type="number" min="0" value="0"></div>
+          <div class="field"><label for="budget">Orçamento total (R$)</label><input id="budget" type="number" min="0" step="100" value="5000"></div>
+          <div class="field"><label for="priority">Prioridade</label><select id="priority"><option>Preço baixo</option><option>Menos escalas</option><option>Hotel bem avaliado</option></select></div>
+          <div class="search-action"><button class="primary" type="submit">Calcular proposta</button></div>
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <main class="shell" id="proposal">
+    <div class="notice"><span>ⓘ</span><div><strong>Estimativa demonstrativa.</strong> Valores não vêm de companhias aéreas ou hotéis em tempo real. Confirme preço, disponibilidade e regras no fornecedor antes da compra.</div></div>
+
+    <div class="section-head"><div><div class="section-tag">01 · Voos</div><h2>Escolha sua rota</h2></div><p id="routeDate">AUX → FLN · 03–10 dez.</p></div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-body"><div class="card-top"><span class="pill">★ Mais rápido</span><div class="price" id="directPrice">R$ 1.290<small>por passageiro · ida e volta</small></div></div>
+          <div class="route"><div class="airport"><strong id="originCode">AUX</strong><span>Origem</span></div><div class="route-line"><b>✈</b></div><div class="airport"><strong id="destinationCode">FLN</strong><span>Destino</span></div></div>
+          <div class="facts"><div class="fact"><span>Duração</span><strong>4h 35min</strong></div><div class="fact"><span>Paradas</span><strong>Direto*</strong></div><div class="fact"><span>Tarifa</span><strong>Econômica</strong></div></div>
+        </div><div class="saving">* Opção ilustrativa; voo direto pode não existir nesta rota/data.</div>
+      </article>
+      <article class="card">
+        <div class="card-body"><div class="card-top"><span class="pill green">Menor preço</span><div class="price" id="connectionPrice">R$ 990<small>por passageiro · ida e volta</small></div></div>
+          <div class="route"><div class="airport"><strong id="originCode2">AUX</strong><span>Origem</span></div><div class="route-line"><b>1 escala</b></div><div class="airport"><strong id="destinationCode2">FLN</strong><span>Destino</span></div></div>
+          <div class="facts"><div class="fact"><span>Duração</span><strong>7h 10min</strong></div><div class="fact"><span>Conexão</span><strong>1h 45min · BSB</strong></div><div class="fact"><span>Economia</span><strong id="savings">R$ 300/pessoa</strong></div></div>
+        </div><div class="saving" id="tradeoff">Você economiza R$ 600 no grupo por 2h35 a mais de viagem.</div>
+      </article>
+    </div>
+
+    <div class="section-head"><div><div class="section-tag">02 · Hotel e clima</div><h2>Onde ficar e o que levar</h2></div><p>7 noites · seleção demonstrativa</p></div>
+    <div class="hotel-layout">
+      <article class="card hotel-card"><div class="hotel-visual"><div class="stars">★★★★</div><b>H</b><span>Conforto perto de tudo</span></div><div class="hotel-details"><span class="pill green">8,7 · Muito bom</span><h3 contenteditable="true" class="editable">Hotel Costa Azul</h3><div class="meta"><span>1,2 km do centro</span><span>Café incluso</span><span>Wi-Fi grátis</span></div><ul class="checklist"><li>Cancelamento grátis até 7 dias antes</li><li>Quarto duplo · 7 noites</li><li id="hotelRate">R$ 240 por noite</li></ul></div></article>
+      <aside class="card weather"><div class="weather-icon">🌤️</div><div class="section-tag">Previsão estimada</div><div class="temps">19°–27° <small>mín. / máx.</small></div><p>Sol entre nuvens, com chance de chuva rápida. Leve roupas leves, protetor solar, capa compacta e um agasalho fino.</p><span class="pill">Consultar perto da viagem</span></aside>
+    </div>
+
+    <div class="section-head"><div><div class="section-tag">03 · Investimento</div><h2>Conta completa</h2></div><p>Edite os valores no código ou use a simulação</p></div>
+    <div class="breakdown">
+      <article class="card"><div class="rows">
+        <div class="cost-row"><span>Passagens (<b id="travelerCount">2</b> viajantes)</span><strong id="fareSubtotal">R$ 1.980,00</strong></div>
+        <div class="cost-row"><span>Taxas de embarque (por pessoa/trecho)</span><strong id="boardingSubtotal">R$ 280,00</strong></div>
+        <div class="cost-row"><span>Bagagem despachada (ida e volta)</span><strong id="baggageSubtotal">R$ 320,00</strong></div>
+        <div class="cost-row"><span>Seleção de assentos</span><strong id="seatSubtotal">R$ 160,00</strong></div>
+        <div class="cost-row"><span>Serviço/administrativa</span><strong id="serviceSubtotal">R$ 89,00</strong></div>
+        <div class="cost-row"><span>Hotel · <b id="nights">7</b> noites</span><strong id="hotelSubtotal">R$ 1.680,00</strong></div>
+      </div></article>
+      <aside class="card total-card"><div class="card-body"><div class="total-label">Total geral com assentos</div><div class="grand-total" id="grandTotal">R$ 4.509,00</div><div class="per-person" id="perPerson">R$ 2.254,50 por pessoa</div>
+        <div class="budget-status"><div id="budgetText">Dentro do orçamento</div><div class="bar"><i id="budgetBar"></i></div></div>
+        <div class="total-options"><label><span>○ Assento aleatório grátis</span><strong id="withoutSeat">R$ 4.349,00</strong></label><label><span>● Com seleção de assento</span><strong id="withSeat">R$ 4.509,00</strong></label></div>
+        <div class="actions"><a class="link-btn accent" id="flightLink" href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Pesquisar voos</a><a class="link-btn" href="https://www.booking.com" target="_blank" rel="noopener">Pesquisar hotéis</a></div>
+      </div></aside>
+    </div>
+    <div class="promo"><div><b>🏷️ Cotação gerada em <span id="generatedAt"></span></b><span>Preço estimado, sujeito a alteração até a confirmação do fornecedor.</span></div><div class="promo-time"><b>Validade simulada: 24 horas</b><span id="expiresAt"></span></div></div>
+  </main>
+  <footer class="shell footer">Rota Certa · Simulador independente de proposta de viagem · Nenhuma compra é realizada nesta página.</footer>
+
+  <script>
+    const $=id=>document.getElementById(id), brl=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
+    function code(value){const m=value.match(/\(([A-Z]{3})\)/i);return m?m[1].toUpperCase():value.trim().slice(0,3).toUpperCase()}
+    function dateBR(v){return new Date(v+'T12:00:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})}
+    function calculate(event){event?.preventDefault();const adults=+$('adults').value||0,children=+$('children').value||0,infants=+$('infants').value||0,paying=adults+children,travelers=paying+infants;
+      const out=new Date($('departure').value+'T12:00:00'),back=new Date($('returnDate').value+'T12:00:00');if(back<=out){alert('A volta precisa ser depois da ida.');return}const nights=Math.round((back-out)/864e5),budget=+$('budget').value||0;
+      const direct=1290,connection=990,boarding=70*paying*2,baggage=80*paying*2,seats=40*paying*2,service=89,hotel=240*nights,fares=connection*paying+(infants*99),without=fares+boarding+baggage+service+hotel,total=without+seats,per=travelers?total/travelers:0;
+      const oc=code($('origin').value),dc=code($('destination').value);['originCode','originCode2'].forEach(id=>$(id).textContent=oc);['destinationCode','destinationCode2'].forEach(id=>$(id).textContent=dc);
+      $('routeDate').textContent=`${oc} → ${dc} · ${dateBR($('departure').value)}–${dateBR($('returnDate').value)}`;$('travelerCount').textContent=travelers;$('nights').textContent=nights;$('fareSubtotal').textContent=brl.format(fares);$('boardingSubtotal').textContent=brl.format(boarding);$('baggageSubtotal').textContent=brl.format(baggage);$('seatSubtotal').textContent=brl.format(seats);$('serviceSubtotal').textContent=brl.format(service);$('hotelSubtotal').textContent=brl.format(hotel);$('grandTotal').textContent=brl.format(total);$('perPerson').textContent=`${brl.format(per)} por pessoa`;$('withoutSeat').textContent=brl.format(without);$('withSeat').textContent=brl.format(total);$('hotelRate').textContent=`${brl.format(240)} por noite`;$('savings').textContent=`${brl.format(direct-connection)}/pessoa`;$('tradeoff').textContent=`Você economiza ${brl.format((direct-connection)*paying)} no grupo por 2h35 a mais de viagem.`;
+      const diff=budget-total;$('budgetText').textContent=budget?(diff>=0?`Dentro do orçamento · sobra ${brl.format(diff)}`:`Acima do orçamento em ${brl.format(-diff)}`):'Informe um orçamento para comparar';$('budgetBar').style.width=budget?`${Math.min(100,total/budget*100)}%`:'0%';$('budgetBar').style.background=diff>=0?'linear-gradient(90deg,#21d39b,#73e6f2)':'linear-gradient(90deg,#ff8a3d,#ff5252)';
+      $('flightLink').href=`https://www.google.com/travel/flights?q=Flights%20from%20${encodeURIComponent(oc)}%20to%20${encodeURIComponent(dc)}%20on%20${$('departure').value}%20through%20${$('returnDate').value}`;document.title=`${oc} → ${dc} | Proposta Rota Certa`;history.replaceState(null,'',`#${oc}-${dc}`);$('proposal').scrollIntoView({behavior:'smooth'});
+    }
+    const now=new Date(),expiry=new Date(now.getTime()+864e5);$('generatedAt').textContent=now.toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'});$('expiresAt').textContent=`Até ${expiry.toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}`;$('tripForm').addEventListener('submit',calculate);calculate();
+  </script>
+</body>
+</html>
