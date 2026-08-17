@@ -10,6 +10,8 @@ Abra `index.html` em qualquer navegador. Preencha origem, destino, datas, passag
 
 A central multifuente apresenta 15 opções de pesquisa de passagens (comparadores, agências e companhias oficiais) e 9 fontes de hotelaria. Fotos reais do hotel são abertas na ficha pública do estabelecimento para evitar imagens ilustrativas enganosas.
 
+Origem e destino aceitam cidade ou código IATA, com sugestões para aeroportos brasileiros. A proposta exibe visualmente cinco estimativas ordenadas por preço, indicando escalas, duração, fonte, menor preço e trecho mais usado. A hospedagem usa automaticamente a data de ida como check-in, sem pedir uma data separada.
+
 ## Importante
 
 O projeto é um simulador visual. Ele não consulta inventário ou preço em tempo real, não processa pagamento e não emite reservas. Antes da compra, confirme valores, disponibilidade, clima, cancelamento e reembolso diretamente com companhias aéreas e hotéis.
